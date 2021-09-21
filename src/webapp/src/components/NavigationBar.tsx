@@ -6,8 +6,10 @@ const NavigationBar = () => {
     return <Navbar bg="dark" variant="dark">
 
         <Link className="navbar-brand" to=""><img
-            src="https://static.whiskybase.com/storage/whiskies/default/big.png?v4"
-            alt="bottle pic" width="50" height="100"/></Link>
+            src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Book_icon_1.png"
+            // src="https://static.whiskybase.com/storage/whiskies/default/big.png?v4"
+            alt="bottle pic" width="25"
+            height="25"/>Book Store</Link>
         <Nav className="me-auto">
 
             <Link to="/add" className="nav-link">Add Book</Link>

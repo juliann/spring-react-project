@@ -1,6 +1,6 @@
 import {Toast} from "react-bootstrap";
 
-export const MyToast = (props: any) => {
+export const MyToast = ({buttonType, message}: { buttonType?: string | null, message?: string | null }) => {
 
 
     return <div style={{
@@ -11,14 +11,14 @@ export const MyToast = (props: any) => {
         boxShadow: " 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"
     }}>
         <Toast
-            className={`border text-white ${props.buttonType === "success" ? "bg-success" : " border-danger bg-danger"}`}>
+            className={`border text-white ${buttonType === "success" ? "bg-success" : " border-danger bg-danger"}`}>
             <Toast.Header
-                className={`border text-white ${props.buttonType === "success" ? "bg-success" : " border-danger bg-danger"}`}
+                className={`border text-white ${buttonType === "success" ? "bg-success" : " border-danger bg-danger"}`}
                 closeButton={false}>
                 <strong className={"mr-auto"}>Success</strong>
             </Toast.Header>
             <Toast.Body>
-                {props.message}
+                {message}
             </Toast.Body>
         </Toast>
     </div>
